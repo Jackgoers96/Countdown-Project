@@ -35,6 +35,12 @@ function App() {
 
     </div>
 
+    <div className='rainbow'> 
+    <p className='text'>
+      <h1> Hello</h1>
+    </p>
+    </div>
+    
     </body>
   );
 }
