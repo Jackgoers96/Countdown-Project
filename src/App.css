@@ -1,0 +1,26 @@
+header {
+  text-align: center;
+  align-content: center;
+}
+
+
+
+.box {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  background-color: grey;
+  width: 50%;
+  border: 20px ;
+  padding: 20px;
+
+}
+
+.boxMiddle {
+  display: flex;
+  justify-content: center;
+}
+.inputBox {
+  background-color: aqua;
+}
