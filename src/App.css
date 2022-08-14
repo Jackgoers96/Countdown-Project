@@ -25,3 +25,20 @@ header {
 .inputBox {
   background-color: aqua;
 }
+
+body {
+  background-image: url("https://image.shutterstock.com/shutterstock/photos/467276468/display_1500/stock-vector-colorful-celebration-background-with-party-balloons-467276468.jpg");
+  background-color: #cccccc;
+ }
+
+ .rainbow {
+  width: 30%;
+  height: 300px;
+  margin: 50px auto;
+  background-image: linear-gradient(to bottom right, red, yellow);
+ }
+
+ .text {
+  text-align: center;
+  padding: 100px;
+ }
