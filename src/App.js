@@ -1,16 +1,21 @@
 import './App.css';
 import React, { useState } from 'react';
+import { unix } from 'moment';
 var countdown = require('countdown');
 
 var moment = require('moment');
+var date = moment().format('MMMM Do YYYY');
+var time = moment().format(' h:mm a');
 
 function App() {
-  const [day, setDay] = useState(0);
-  const [month, setMonth] = useState(0);
-  const [year, setYear] = useState(0);
+  const [month, setMonth] = useState();
+  const [day, setDay] = useState();
+  const [year, setYear] = useState();
+
+
   return (
     <body>
-      <header> <h1> This is the header. The current time is {moment().format('MMMM Do YYYY' + ' h:mm a')} </h1>
+      <header> <h1> This is the header. The current time is {date + time} </h1>
       </header>
 
       <div className='container'>
@@ -23,25 +28,47 @@ function App() {
               </label>
             </div>
             <div className='boxMiddle'>
-              <div><input id='day' className='inputBox' type="text" name="day" placeholder='enter day in DD' onChange={(evt) => setDay(evt.target.value)} /></div>
+              <input
+                value={month}
+                onChange={e => setMonth(e.target.value)}
+                placeholder="mm"
+                type="text"
+                name="month"
+                required
+              />
+              <input
+                value={day}
+                onChange={e => setDay(e.target.value)}
+                placeholder="dd"
+                type="text"
+                name="day"
+                required
+              />
+              <input
+                value={year}
+                onChange={e => setYear(e.target.value)}
+                placeholder="YYYY"
+                type="text"
+                name="year"
+                required
+              />
 
-              <div><input id='month' className='inputBox' type="text" name="month" placeholder='enter day in MM' onChange={(evt) => setMonth(evt.target.value)} /></div>
-              <div><input id='year' className='inputBox' type="text" name="year" placeholder='enter day in YYYY' onChange={(evt) => setYear(evt.target.value)} /></div>
             </div>
+            <button type="submit">Submit</button>
           </form>
           <div className='boxLower'>
-            <h3> {day-Number(moment().format('DD'))} days left</h3>
+            <h3> { }</h3>
           </div>
         </div>
 
       </div>
 
-    <div className='rainbow'> 
-    <p className='text'>
-      <h1> Hello</h1>
-    </p>
-    </div>
-    
+      <div className='rainbow'>
+        <p className='text'>
+          <h1> Hello</h1>
+        </p>
+      </div>
+
 
     </body>
   );
